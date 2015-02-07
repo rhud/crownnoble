@@ -159,7 +159,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 11;
   height: 100%;
   visibility: hidden;
   background-color: #1e2022;
@@ -14435,6 +14435,9 @@ header.navbar {
   background: none;
   z-index: 10;
 }
+header.navbar.page .logo {
+  background-image: url(/assets/img/cn-logo.png) !important;
+}
 .logo {
   height: 100px;
   width: 100px;
@@ -14457,6 +14460,16 @@ header.navbar {
   width: 100px;
   -webkit-background-size: 100px 100px;
           background-size: 100px 100px;
+}
+.logo.small {
+  -webkit-background-size: 50px 50px;
+          background-size: 50px 50px;
+  height: 50px;
+}
+.logo.mid {
+  -webkit-background-size: 80px 80px;
+          background-size: 80px 80px;
+  height: 80px;
 }
 a.navbar-brand {
   float: left;
@@ -14498,6 +14511,9 @@ nav.pure-drawer ul li a:hover {
   background: #111;
   color: #c69c6d;
 }
+nav.pure-drawer.page {
+  background: #ffffff !important;
+}
 @media (max-width: 768px) {
   nav.pure-drawer .container {
     padding: 0px !important;
@@ -14519,9 +14535,9 @@ nav.pure-drawer ul li a:hover {
     left: 0px;
     -webkit-transform: translate3d(0%, 0, 0) !important;
     transform: translate3d(0%, 0, 0) !important;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
     opacity: 1;
     z-index: 100;
     float: right;
@@ -14536,12 +14552,18 @@ nav.pure-drawer ul li a:hover {
     height: 50px;
     margin-top: 5px;
     background-image: url(/assets/img/cn-logo.png);
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
   }
   nav.pure-drawer ul {
     width: auto;
     float: right;
     margin: 7px 0px 7px;
     top: 0px;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
   }
   nav.pure-drawer ul li a {
     padding: 0px 0px 2px 0px !important;
@@ -14587,6 +14609,31 @@ nav.pure-drawer ul li a:hover {
     color: white;
     border-color: white;
   }
+  nav.pure-drawer.page {
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+  nav.pure-drawer.page.top {
+    padding-top: 5px !important;
+    -webkit-box-shadow: 0px 0px 4px rgba(49, 53, 57, 0.3);
+    box-shadow: 0px 0px 4px rgba(49, 53, 57, 0.3);
+  }
+  nav.pure-drawer.page.top .logo {
+    -webkit-background-size: 80px 80px !important;
+            background-size: 80px 80px !important;
+    height: 80px !important;
+    background-image: url(/assets/img/cn-logo.png) !important;
+  }
+  nav.pure-drawer.page.top ul {
+    margin-top: 20px;
+  }
+  nav.pure-drawer.page.top ul li a {
+    color: #c69c6d;
+  }
+  nav.pure-drawer.page.top ul li a:hover {
+    border-color: #c69c6d;
+  }
 }
 @media (min-width: 992px) {
   nav.pure-drawer ul li a {
@@ -14616,6 +14663,11 @@ main {
   position: relative;
   overflow-x: hidden;
   display: block;
+}
+section.title {
+  height: 300px;
+  background: red;
+  margin-top: 100px;
 }
 #enquire {
   background: #EEE;
