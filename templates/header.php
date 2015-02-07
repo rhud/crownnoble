@@ -4,15 +4,11 @@
 	<nav class="pure-drawer top" data-position="left">
 		<div class="container">
 	    <a class="navbar-brand desktop-only logo white" href="<?php echo esc_url(home_url('/')); ?>"></a>
-	    <ul>
-	    	<li><a class="icon" href="#">Home</a></li>
-	    	<li><a class="icon" href="#">About</a></li>
-	    	<li><a class="icon" href="#">Services</a></li>
-	    	<li><a class="icon" href="#">Business Packages</a></li>
-	    	<li><a class="icon" href="#">Xero</a></li>
-	    	<li><a class="icon" href="#">Blog</a></li>
-	    	<li><a class="icon" href="#">Contact</a></li>
-	    </ul>
+	    	<?php
+	    	  if (has_nav_menu('primary_navigation')) :
+	    	    wp_nav_menu(array('theme_location' => 'primary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav navbar-nav'));
+	    	  endif;
+	    	?>
 	    </div>
 	</nav>  
 	

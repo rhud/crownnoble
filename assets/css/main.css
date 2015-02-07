@@ -7585,6 +7585,126 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -o-animation-name: rollOut;
      animation-name: rollOut;
 }
+@font-face {
+  font-family: 'fontello';
+  src: url('/assets/fonts/fontello.eot?24553113');
+  src: url('/assets/fonts/fontello.eot?24553113#iefix') format('embedded-opentype'), url('/assets/fonts/fontello.woff?24553113') format('woff'), url('/assets/fonts/fontello.ttf?24553113') format('truetype'), url('/assets/fonts/fontello.svg?24553113#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('/assets/fonts/fontello.svg?24553113#fontello') format('svg');
+  }
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-facebook:before {
+  content: '\e800';
+}
+/* '' */
+.icon-mail:before {
+  content: '\e801';
+}
+/* '' */
+.icon-phone:before {
+  content: '\e802';
+}
+/* '' */
+.icon-location:before {
+  content: '\e803';
+}
+/* '' */
+.icon-clock:before {
+  content: '\e804';
+}
+/* '' */
+.icon-xero:before {
+  content: '\e805';
+}
+/* '' */
+.icon-dollar:before {
+  content: '\e806';
+}
+/* '' */
+.icon-money:before {
+  content: '\e807';
+}
+/* '' */
+.icon-light:before {
+  content: '\e808';
+}
+/* '' */
+.icon-down:before {
+  content: '\e809';
+}
+/* '' */
+.icon-attention:before {
+  content: '\e80a';
+}
+/* '' */
+.icon-note:before {
+  content: '\e80b';
+}
+/* '' */
+.icon-sitemap:before {
+  content: '\e80c';
+}
+/* '' */
+.icon-case:before {
+  content: '\e80e';
+}
+/* '' */
+.icon-left:before {
+  content: '\e810';
+}
+/* '' */
+.icon-book:before {
+  content: '\e811';
+}
+/* '' */
+.icon-key:before {
+  content: '\e812';
+}
+/* '' */
+.icon-building:before {
+  content: '\e813';
+}
+/* '' */
+.icon-right:before {
+  content: '\e814';
+}
+/* '' */
+.icon-up:before {
+  content: '\e815';
+}
+/* '' */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -14236,8 +14356,21 @@ p {
 .header:after {
   right: -60px;
 }
+.header.black:before,
+.header.black:after {
+  border-color: rgba(0, 0, 0, 0.75);
+}
 h3 {
   font-size: 150%;
+}
+.space.top {
+  margin-top: 20px;
+}
+.space.bottom {
+  margin-bottom: 20px;
+}
+.right {
+  text-align: right;
 }
 .comment-list ol {
   list-style: none;
@@ -14296,14 +14429,18 @@ header.navbar {
   margin: 0px;
   padding: 10px 0px;
   border: none;
-  background: red;
   display: fixed;
+  position: absolute;
+  width: 100%;
+  background: none;
+  z-index: 10;
 }
 .logo {
-  height: 50px;
-  width: 50px;
-  -webkit-background-size: 50px 50px;
-          background-size: 50px 50px;
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
+  -webkit-background-size: 100px 100px;
+          background-size: 100px 100px;
   background-position: center center;
   background-repeat: no-repeat;
   display: inline-block;
@@ -14441,7 +14578,7 @@ nav.pure-drawer ul li a:hover {
     transition: 0.4s;
   }
   nav.pure-drawer.top ul {
-    margin-top: 20px;
+    margin-top: 30px;
   }
   nav.pure-drawer.top ul li a {
     color: white;
@@ -14468,19 +14605,104 @@ nav.pure-drawer ul li a:hover {
     width: 33.33333333%;
   }
 }
+footer {
+  background: #222;
+}
+footer .container {
+  padding: 50px 0px;
+  color: #AAA;
+}
 main {
   position: relative;
   overflow-x: hidden;
   display: block;
 }
-footer {
-  padding: 100px 0px;
+#enquire {
   background: #EEE;
 }
-footer .container {
-  padding: 50px 0px;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+#enquire #enquiry-form {
+  height: 400px;
+  margin: 0px;
+}
+#enquire #enquiry-form .wrapper {
+  padding: 100px 75px 0px;
+  text-align: center;
+}
+#enquire #enquiry-form .wrapper .enquiry-form {
+  text-align: left;
+}
+#enquire #enquiry-form .wrapper .enquiry-form .wpcf7 {
+  margin-top: 20px;
+}
+#enquire #enquiry-form .wrapper .enquiry-form .wpcf7 span.wpcf7-not-valid-tip {
+  position: absolute;
+  margin-top: -33px;
+  right: 5px;
+  color: #C00 !important;
+}
+#enquire #enquiry-form .wrapper .enquiry-form .wpcf7 .wpcf7-response-output {
+  background: #C00;
+  border-radius: 5px;
+  padding: 15px 20px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  margin: 5px 0px;
+}
+#enquire #enquiry-form .wrapper .enquiry-form .wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ok {
+  background: #c69c6d;
+}
+#enquire #enquiry-form .wrapper .enquiry-form input,
+#enquire #enquiry-form .wrapper .enquiry-form textarea {
+  border: 1px solid #c69c6d;
+  padding: 8px 10px;
+  margin: 5px 0px;
+  width: 100%;
+  font-size: 80%;
+  color: #222;
+}
+#enquire #enquiry-form .wrapper .enquiry-form textarea {
+  height: 100px;
+}
+#enquire #enquiry-form .wrapper .enquiry-form input[type="submit"] {
+  width: auto;
+  background: white;
+  border: 2px solid #c69c6d;
+  color: #c69c6d;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition: 200ms;
+  -o-transition: 200ms;
+  transition: 200ms;
+}
+#enquire #enquiry-form .wrapper .enquiry-form input[type="submit"]:hover {
+  color: white;
+  background: #c69c6d;
+}
+#enquire #map {
+  height: 600px;
+  padding: 0px;
+  background: #c69c6d;
+}
+#enquire #map .contact {
+  height: 200px;
+  padding: 50px 75px 0px;
+  color: white;
+}
+#enquire #map .contact p {
+  margin: 0px 0px 8px;
+  font-weight: 600;
+}
+#enquire #map .contact p i {
+  padding-right: 10px;
+}
+#enquire #map .contact p a {
+  color: white;
+}
+#enquire #map #infobubble-content .marker-info-wrapper {
+  margin: 0px;
+  padding: 5px 0px;
+  background: none;
 }
 #hero {
   width: 100%;
@@ -14515,6 +14737,10 @@ footer .container {
   font-weight: 300 !important;
   width: 100% !important;
 }
+#hero #hero-msg.cd-intro .cd-headline .cd-words-wrapper b p {
+  font-size: 100%;
+  font-weight: 300;
+}
 .wrap {
   height: auto;
   padding: 100px 0px;
@@ -14540,6 +14766,7 @@ footer .container {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff111111', endColorstr='#ff222222', GradientType=0);
   color: #EEE;
   text-align: center;
+  padding-bottom: 50px;
 }
 #services h3 {
   color: #666;
@@ -14554,34 +14781,15 @@ footer .container {
   text-align: center;
   padding: 30px 20px;
 }
-#services .list .service i.icon {
-  background: #222;
-  width: 80px;
-  height: 80px;
-  border-radius: 40px;
+#services .list .service i {
   display: inline-block;
+  color: #c69c6d;
+  font-size: 500%;
 }
 #services .list .service h2 {
   font-size: 120%;
   color: #c69c6d;
   font-weight: 700;
-}
-#enquire {
-  background: #333;
-}
-#enquire #enquiry-form {
-  background: #333;
-  height: 400px;
-}
-#enquire #map {
-  height: 400px;
-  background: red;
-  padding: 0px;
-}
-#enquire #map #infobubble-content .marker-info-wrapper {
-  margin: 0px;
-  padding: 5px 0px;
-  background: none;
 }
 @media (min-width: 768px) {
   #services .list .service {
