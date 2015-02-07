@@ -6,7 +6,7 @@
 				<h1 class="cd-headline slide">
 					<span class="cd-words-wrapper">
 						<?php 
-							$args = array( 'post_type' => 'snippets', 'cat' => 4, 'order' => 'ASC' );
+							$args = array( 'post_type' => 'snippets', 'cat' => 3, 'order' => 'ASC' );
 							$loop = new WP_Query( $args );
 							$count = 0;
 							while ( $loop->have_posts() ) : $loop->the_post();
@@ -51,7 +51,7 @@
 			<div class="list">
 				<div class="row">
 					<?php 
-						$args = array( 'post_type' => 'service', 'order' => 'ASC' );
+						$args = array( 'post_type' => 'services', 'order' => 'ASC' );
 						$loop = new WP_Query( $args );
 						$count = 0;
 						while ( $loop->have_posts() ) : $loop->the_post();
