@@ -1,0 +1,23 @@
+// Glyphicons font path
+$icon-font-path:        "/assets/fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+$gold:					#c69c6d;
+$dgold:					#a98751;
+$gold30:				lighten($gold, 30%);
+$gold15:				lighten($gold, 15%); 
+
+$brand-primary:         $gold;
+$text-color:			#222;
+
+$gold75:				rgba(198, 156, 109, .75);
+
+// Crown Noble Override Variables:
+
+$navbar-default-bg:         	#000000;
+$navbar-default-border:			$brand-primary;
+
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

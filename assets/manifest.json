@@ -1,14 +1,31 @@
 {
-  "dest": "assets/manifest.json",
-  "querystring": true,
-  "assets/css/main.min.css": {
-    "path": "assets/css/main.min.css",
-    "hash": "a60f37ee7c1d033cb10aaff2f2c5baa9",
-    "handle": "roots_css"
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js",
+        "scripts/plugins/textanimate.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "editor-style.css": {
+      "files": [
+        "styles/editor-style.scss"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "modernizr.js": {
+      "bower": ["modernizr"]
+    }
   },
-  "assets/js/scripts.min.js": {
-    "path": "assets/js/scripts.min.js",
-    "hash": "997b58117166e6c6745bba2014edbb35",
-    "handle": "roots_js"
+  "config": {
+    "devUrl": "http://crownnoble.dev"
   }
 }

@@ -1,0 +1,470 @@
+main.main {
+	position: relative;
+	overflow-x: hidden;
+	display: block;
+	padding: 0px;
+}
+
+section.content {
+	background: #F6F6F6;
+	margin-top: 100px;
+	padding: 50px 0px;
+}
+
+#hero {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-image: url(/assets/images/business.jpg);
+	position: relative;
+	background-size: cover;
+	&.desktop {
+		background-attachment: fixed;
+	}
+	
+	#hero-msg {
+		top: 50%;
+		margin: -50px auto;
+		display: block;
+		position: absolute;
+		
+		&.cd-intro {
+			width: 100% !important;
+			max-width: 100% !important;
+			.cd-headline {
+				.cd-words-wrapper {
+					text-align: center !important;
+					color: white;
+					width: 90% !important;
+					margin: 0px 5%;
+					b {
+						text-align: center !important;
+						font-weight: 300 !important;
+						width: 100% !important;
+						p {
+							font-size: 100%;
+							font-weight: 300;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.wrap {
+	height: auto;
+	padding: 100px 0px;
+}
+
+#about {
+	background: #EEE;
+	//@include gradient-vertical($gold, $dgold, 0%, 100%);
+	text-align: center;
+	color: #222;
+	.header {
+		h1 {
+			color: $gold;
+		}
+		&:before, &:after {
+			border-bottom-color: $gold !important;
+		}
+		
+	}
+}
+
+#services {
+	background: #111;
+	@include gradient-vertical(#111, #222, 0%, 100%);
+	color: #EEE;
+	text-align: center;
+	padding-bottom: 50px;
+	
+	h3 {
+		color: #666;
+	}
+	.container {
+		margin: 0px 15px;
+		.list {
+			margin: 50px 0px;
+			
+			.service {
+				a.inner {
+					background: #292929;
+					height: auto;
+					display: block;
+					margin: 15px 0px;
+					text-align: center;
+					padding: 30px 20px;
+					@include transition(all 0.4s ease);
+					
+					i {
+						display: inline-block;
+						color: $gold;
+						font-size: 500%;
+						@include transition(all 0.4s ease);
+					}
+					h2 {
+						font-size: 120%;
+						color: $gold;
+						font-weight: 700;
+					}
+					p {
+						@include transition(all 0.4s ease);
+					}
+					button {
+						background: $gold;
+						color: white;
+						border: none;
+						border-radius: 4px;
+						padding: 7px 15px;
+						font-weight: 600;
+						text-transform: uppercase;
+						border-bottom: 3px solid $dgold;
+						@include transition(all 0.4s ease);
+					}
+
+					&:hover {
+						background: #333;
+						@include scale(1.05);
+						text-decoration: none;
+						i {
+							color: white;
+						}
+						p {
+							color: white;
+						}
+						button {
+							@include gradient-vertical($dgold, $gold);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-header {
+	height: 300px;
+	display: block;
+	background-position: 50% 50%;
+	background-color: #000;
+	background-repeat: no-repeat;
+	top: 0px;
+	margin: 0px;
+	text-align: center;
+	padding-top: 180px;
+	h1 {
+		margin: 0px;
+		width: 100%;
+		text-align: center;
+		color: white;
+		font-size: 200%;
+	}
+	&.about {
+		background-color: #494d4f;
+	}
+	&.services {
+		background-color: #4b4947;
+	}
+	&.xero {
+		background-color: #436165;
+	}
+	&.contact {
+		background-color: #373333;
+	}
+	&.business-packages {
+		background-color: #343435;
+	}
+}
+
+.wrapper {
+	&.grey {
+		@include gradient-vertical(#666, #000, 0%, 100%);
+		background-attachment: fixed;
+	}
+	&.gold {
+		@include gradient-vertical($gold, $gold30, -50%, 100%);
+		background-attachment: fixed;
+	}
+	&.light {
+		@include gradient-vertical(#EEE, #F9F9F9, 0%, 100%);
+	}
+	.container.page {
+		padding: 50px 30px;
+		.header {
+			margin-bottom: 50px;
+		}
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.staff {
+	.photo {
+		text-align: center;
+		padding-bottom: 30px;
+		img {
+			width: 200px;
+			padding: 5px;
+			box-shadow: 0 0 5px #CCC;
+			height: auto;
+		}
+		h3, em {
+			color: $gold;
+		}
+	}
+}
+
+
+section.services {
+	color: white;
+
+	h1 {
+		font-size: 150%;
+		font-weight: 600;
+  		position: relative;
+  		padding-bottom: 10px;
+  		text-align: center;
+		&:before{
+		    content: "";
+		    position: absolute;
+		    width: 30%;
+		    height: 1px;
+		    bottom: 0px;
+		    left: 35%;
+		    border-bottom: 1px solid $gold;
+		}
+		
+	}
+
+	&.intro {
+		color: #222;
+		h1.feature {
+			color: $gold;
+			font-weight: 200;
+			text-align: left;
+			text-transform: uppercase;
+			font-size: 280%;
+			margin: 0px;
+			&:before {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+section.packages, section.xero {
+	.btn.btn-default {
+		cursor: pointer;
+		&:active, &:hover {
+			background: $gold;
+			color: white;
+			cursor: pointer;
+		}
+	}
+	.plan {
+		border: 1px solid #DDD;
+		display: block;
+		padding: 0px;
+		text-align: center;
+		margin: 15px 0px;
+		background: white;
+		.price {
+			padding: 30px;
+			h3 {
+				font-size: 100%;
+				letter-spacing: 5px;
+				color: #999;
+				text-transform: uppercase;
+			}
+			h1 {
+				color: $gold;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 400%;
+				line-height: 1;
+				sub, sup {
+					font-weight: 400;
+					letter-spacing: 5px;
+				}
+				sup {
+					vertical-align: super;
+					font-size: 40%;
+				}
+				sub {
+					vertical-align: baseline;
+					font-size: 25%;
+					margin-left: 5px;
+					top: 0px;
+					&.twoline {
+						text-align: center;
+						display: inline-block;
+						height: auto;
+						line-height: 13px;
+					}
+				}
+			}
+			i.icon-xero {
+				font-size: 80px;
+				color: #999;
+			}
+		}
+		.planrow {
+			display: block;
+			padding: 10px 30px;
+			border-top: 1px dotted #DDD;
+			color: #999;
+			&.odd {
+				background: #F9F9F9;
+			}
+			&.even {
+				background: #FCFCFC;
+			}
+		}
+		.more {
+			display: block;
+			padding: 30px;
+			border-top: 1px dotted #DDD;
+			a.button {
+				background: $gold;
+				padding: 10px 20px;
+				text-transform: uppercase;
+				font-weight: 700;
+				color: white;
+				border-radius: 4px;
+				border-bottom: 3px solid $dgold;
+				&:hover {
+					text-decoration: none;
+					@include gradient-vertical($dgold, $gold);
+				}
+			}
+		}
+	}
+}
+
+section.contact {
+	p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	i {
+		color: $gold;
+		padding-left: 10px;
+		padding-right: 20px;
+		font-size: 24px;
+		&.blank {
+			opacity: 0;
+		}
+	}
+}
+
+
+
+@media (min-width: $screen-sm-min) {
+	#hero {
+		display: block;
+		#hero-msg {
+			&.cd-intro {
+				.cd-headline {
+					.cd-words-wrapper {
+						b {
+							p {
+								font-size: 80%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#services {
+		.container {
+			margin: 0px auto;
+			.list {
+				.service {
+					a.inner {
+						height: 400px;
+						margin: 15px 0px;
+					}
+				}
+			}
+		}
+		
+	}
+	.page-header {
+		height: 300px;
+		margin-top: 100px;
+		padding-top: 130px;
+		h1 {
+			font-size: 250%;
+		}
+	}
+
+	.staff {
+		.photo {
+			img {
+				width: 140px;
+				height: auto;
+				padding: 5px;
+				margin: 10px auto;
+				background: #FFF;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	#hero {
+		background-attachment: fixed;
+		#hero-msg {
+			&.cd-intro {
+				.cd-headline {
+					.cd-words-wrapper {
+						b {
+							p {
+								font-size: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	.page-header {
+		h1 {
+			font-size: 280%;
+		}
+	}
+	.wrapper {
+		.container.page {
+			padding: 100px 30px;
+		}	
+	}
+
+	.staff {
+		.photo {
+			img {
+				width: 200px;
+				height: auto;
+				background: #FFF;
+				padding: 5px;
+				margin: 10px auto;
+			}
+			h3 {
+				color: $gold;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	#hero {
+
+	}
+}

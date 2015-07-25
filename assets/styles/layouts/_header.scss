@@ -1,0 +1,227 @@
+header.navbar {
+	margin: 0px;
+	padding: 10px 0px;
+	border: none;
+	display: fixed;
+	position: absolute;
+	width: 100%;
+	background: none;
+	z-index: 10;
+	
+	&.page {
+		.logo {
+			background-image: url(/assets/images/cn-logo-white.png) !important;	
+		}
+	}
+}
+
+.logo {
+	height: 100px;
+	width: 100px;
+	margin-top: 20px;
+	background-size: 100px 100px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	z-index: 100;
+	
+	&.white {
+		background-image: url(/assets/images/cn-logo-white.png);
+	}
+	&.gold {
+		background-image: url(/assets/images/cn-logo.png);	
+	}
+	&.large {
+		height: 100px;
+		width: 100px;
+		background-size: 100px 100px;
+	}
+	&.small {
+		background-size: 50px 50px;
+		height: 50px;
+	}
+	&.mid {
+		background-size: 80px 80px;
+		height: 80px;
+	}
+	
+}
+
+
+a.navbar-brand {
+	float: left;
+	top: 0px;
+	&.mobile-only {
+		float: none;
+		width: 100%;
+	}
+	&.desktop-only {
+		display: none;
+	}
+	
+	
+}
+
+nav.pure-drawer {
+	ul {
+		list-style: none;
+		width: 230px;
+		margin: 80px 10px 0px;
+		padding: 0px;
+		li {
+			border-top: 1px solid black;
+			padding: 0px;
+			&:last-child {
+				border-bottom: 1px solid black;
+			}
+			a {
+				display: block;
+				padding: 15px;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 100%;
+				letter-spacing: 1px;
+				@include transition(400ms);
+				&:hover {
+					text-decoration: none;
+					background: #111;
+					color: $gold;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: $screen-sm-min) {
+	nav.pure-drawer {
+		.container {
+			padding: 0px !important;
+		}
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.mobile-only {
+		display: none;
+	}
+	.desktop-only {
+		display: block !important;
+	}
+	nav.pure-drawer {
+		visibility: visible;
+		position: fixed;
+		top: 0px;
+		height: 60px;
+		width: 100% !important;
+		left: 0px;
+		-webkit-transform: translate3d(0%, 0, 0) !important;
+		transform: translate3d(0%, 0, 0) !important;
+		@include transition(0.4s);
+		opacity: 1;
+		z-index: 100;
+		float: right;
+		padding: 0px 0px;
+		background: rgba(255, 255, 255, .9);
+		@include box-shadow(0px 0px 4px rgba(49, 53, 57,0.3));
+		
+		a.navbar-brand {
+			background-size: 50px 50px;
+			height: 50px;
+			margin-top: 5px;
+			background-image: url(/assets/images/cn-logo.png);	
+			@include transition(0.4s);
+		}
+		ul {
+			width: auto;
+			float: right;
+			margin: 7px 0px 7px;
+			top: 0px;
+			@include transition(0.4s);
+			li {
+				a {
+					padding: 0px 0px 2px 0px !important;
+					margin: 15px 8px !important;
+					font-size: 100%;
+					font-weight: 600;
+					border-bottom: 2px solid transparent;
+					&:hover {
+						background: none;
+						color: $dgold;
+						border-bottom: 2px solid $gold;
+					}
+				}
+			}
+			li, li:last-child {
+				float: left;
+				border: none;
+			}
+		}
+		&.top {
+			background: none;
+			padding-top: 20px;
+			height: 100px;
+			@include box-shadow(0px 0px 0px rgba(49, 53, 57,0.3));
+			
+			a.navbar-brand {
+				height: 100px;
+				width: 100px;
+				background-size: 100px 100px;
+				background-image: url(/assets/images/cn-logo-white.png);
+				@include transition(0.4s);
+			}
+			ul {
+				margin-top: 30px;
+				li {
+					a {
+						color: white;
+						&:hover {
+							color: white;
+							border-color: white;
+							
+						}
+					}
+				}
+			}
+		}
+		&.page {
+			background: rgba(255, 255, 255, 1.0) !important;
+			@include transition(0.4s);
+			&.top {
+				padding-top: 5px !important;
+				@include box-shadow(0px 0px 4px rgba(49, 53, 57,0.3));
+				.logo {
+					background-size: 80px 80px;
+					height: 80px;	
+					background-image: url(/assets/images/cn-logo.png);
+				}
+				ul {
+					margin-top: 20px;
+					li a {
+						color: $gold;
+						&:hover {
+							border-color: $gold;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+@media (min-width: $screen-md-min) { 
+	nav.pure-drawer {
+		ul {
+			li {
+				a {
+					margin: 15px 15px !important;
+					
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+
+}

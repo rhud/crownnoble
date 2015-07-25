@@ -1,0 +1,155 @@
+#enquire {
+	margin: 0px;
+	background: white;
+	#enquiry-form {
+		margin: 0px;
+		background: white;
+		.wrapper {
+			padding: 50px 15px;
+			text-align: center;
+			margin: 0px;
+			
+			.enquiry-form {
+				text-align: left;
+				.wpcf7 {
+					margin-top: 20px;
+					span.wpcf7-not-valid-tip {
+						position: absolute;
+						margin-top: -33px;
+						right: 5px;
+						color: #C00 !important;
+					}
+					.wpcf7-response-output {
+						background: #C00;
+						border-radius: 5px;
+						padding: 15px 20px;
+						border: none;
+						color: white;
+						font-weight: 600;
+						margin: 5px 0px;
+						&.wpcf7-mail-sent-ok {
+							background: $gold;
+						}
+					}
+				}
+				input, textarea {
+					border: 1px solid $gold;
+					padding: 8px 10px;
+					margin: 5px 0px;
+					width: 100%;
+					font-size: 80%;
+					color: #222;
+				}
+				textarea {
+					height: 100px;
+				}
+				input[type="submit"] {
+					width: auto;
+					background: white;
+					border: 2px solid $gold;
+					color: $gold;
+					font-weight: 600;
+					text-transform: uppercase;
+					@include transition(200ms);
+					&:hover {
+						color: white;
+						background: $gold;
+					}
+				}
+			}
+		}
+	}
+	
+	#map {
+		background: $gold;
+		.contact {
+			height: auto;
+			padding: 50px 30px;
+			color: white;
+			background: $gold;
+			p {
+				margin: 0px 0px 8px;
+				font-weight: 600;
+				i {
+					padding-right: 10px;
+				}
+				a {
+					color: white;
+				}
+				.blank {
+					opacity: 0;
+				}
+			}
+		}
+		
+		padding: 0px;
+		background: $gold;
+		
+		#infobubble-content .marker-info-wrapper {
+			margin: 0px;
+			padding: 5px 0px;
+			background: none;
+		}
+	}
+}
+
+footer {
+	background: #222;
+	position: relative;
+	clear: both;
+	.container {
+		padding: 50px 0px;
+		color: #AAA;
+		.copyright, .hh {
+			text-align: center;
+		}
+	}
+}
+
+
+@media (min-width: $screen-sm-min) {
+	#enquire {
+		#enquiry-form {
+			.wrapper {
+				float: right;
+				max-width: 600px;
+				.header {
+					width: 220px;
+				}
+			}
+		}
+		#map {
+			.contact {
+				padding: 60px 50px;
+			}
+		}
+	}
+	
+
+	footer {
+		.container {
+			.copyright {
+				text-align: left;
+			}
+			.hh {
+				text-align: right;
+			}
+		}
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	#enquire {
+		#enquiry-form {
+			.wrapper {
+				padding: 100px 40px;
+				.header {
+					width: auto;
+				}
+			}
+		}
+	}
+}
+
+
+
