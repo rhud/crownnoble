@@ -74,6 +74,162 @@ section.content {
 	}
 }
 
+#latest {
+	background: #EEE;
+	padding: 50px 30px;
+	h1 {
+		margin-bottom: 20px;
+		font-size: 2em;
+	}
+	a.entry {
+		position: relative;
+		background: #FAFAFA;
+		border: 1px solid #DDD;
+		border-radius: 4px;
+		overflow: hidden;
+		margin-right: 0px 15px;
+		display: block;
+		img {
+			float: left;
+			margin-right: 20px;
+			border-right: 3px solid $gold;
+		}
+		.content {
+			h2 {
+				padding: 15px 10px 5px;
+				margin: 0px;
+				font-size: 1.5em;
+			}
+			time {
+				text-transform: uppercase;
+				color: #999;
+				letter-spacing: 1px;
+				padding: 0px;
+				display: block;
+				font-size: 0.9em;
+			}
+		}
+		&:hover {
+			background: #FFFFFF;
+			text-decoration: none;
+		}
+	}
+	a.event {
+		background: #FAFAFA;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		margin: 10px 0px;
+		overflow: hidden;
+		display: block;
+		position: relative;
+		width: 100%;
+
+		.date {
+			@include gradient-vertical($gold, $dgold, 0%, 100%);
+			float: left;
+			padding: 10px 0px;
+			width: 80px;
+			text-align: center;
+			margin-right: 20px;
+			color: #F9F9F9;
+			text-transform: uppercase;
+			border-right: 1px solid #ddd;
+			.day {
+				font-weight: 700;
+				font-size: 30px;
+				line-height: 30px;
+			}
+			.month {
+				letter-spacing: 3px;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		}
+		.title {
+			h3 {
+				font-weight: 300;
+				margin: 0px;
+				padding: 20px;
+				span {
+					background: $gold;
+					border-radius: 4px;
+					padding: 5px 10px;
+					color: white;
+					font-size: 12px;
+					font-weight: 400;
+					text-transform: uppercase;
+					position: absolute;
+					right: 20px;
+					top: 17px;
+					display: none;
+				}
+			}
+		}
+		//a.event:Hover
+		&:hover {
+			background: #FFFFFF;
+			text-decoration: none;
+			.date {
+				color: #FFFFFF;
+			}
+			.title {
+				h3 {
+					span {
+						display: inline;
+						&:hover {
+							background: $dgold;
+						}
+					}
+				}	
+			}
+		}
+		
+	}
+}
+
+#subscribe {
+	background: $gold;
+	padding: 50px 30px;
+	@include gradient-vertical($gold, $dgold, 0%, 100%);
+	.mailchimp {
+		padding: 0px;
+		text-align: center;
+		position: relative;
+		form {
+			display: table;
+
+			#mc-email {
+				position: relative;
+				padding: 10px;
+				border-radius: 4px 0px 0px 4px;
+				border: 1px solid $dgold;
+				background: rgba(255,255,255,0.75);
+				width: 100%;
+				display: inline;
+				border-right: none;
+				display: table-cell;
+				&:hover {
+					background: rgba(255,255,255,1);
+				}
+			}
+			#mc-send {
+				position: relative;
+				padding: 10px 15px;
+				background: rgba(0,0,0,0.75);
+				color: white;
+				text-transform: uppercase;
+				border-radius: 0px 4px 4px 0px;
+				border: 1px solid $dgold;
+				border-left: none;
+				display: table-cell;
+				&:hover {
+					background: rgba(0,0,0,1);
+				}
+			}
+		}
+	}
+}
+
 #services {
 	background: #111;
 	@include gradient-vertical(#111, #222, 0%, 100%);
@@ -177,6 +333,17 @@ section.content {
 	&.business-packages {
 		background-color: #343435;
 	}
+	&.error { //404 Error
+		background-color: #1a1007;
+		background-image: url(/assets/images/404.header.jpg) !important;
+	}
+	&.blog { //404 Error
+		background-color: #000000;
+		background-image: url(/assets/images/header-blog.jpg) !important;
+	}
+
+
+
 }
 
 .wrapper {
@@ -273,6 +440,7 @@ section.packages, section.xero {
 		text-align: center;
 		margin: 15px 0px;
 		background: white;
+		border-radius: 4px;
 		.price {
 			padding: 30px;
 			h3 {
@@ -362,6 +530,34 @@ section.contact {
 	}
 }
 
+header.blog {
+	.blogbar {
+		background: $gold;
+		margin: 100px 0px 0px;
+		padding: 20px;
+		text-align: center;
+		
+	}
+}
+
+section.error {
+
+}
+
+section.events {
+	.event-wrapper {
+		.type-tribe_events {
+			border: 1px solid #DDD;
+			display: block;
+			margin: 10px -15px;
+			background: white;
+			border-radius: 4px;
+			overflow: hidden;
+			padding: 50px;
+		}
+	}
+}
+
 
 
 @media (min-width: $screen-sm-min) {
@@ -376,6 +572,94 @@ section.contact {
 								font-size: 80%;
 							}
 						}
+					}
+				}
+			}
+		}
+	}
+
+	#latest {
+		h1 {
+			margin-bottom: 30px;
+			font-size: 3em;
+		}
+		a.entry {
+			
+			img {
+				
+			}
+			.content {
+				h2 {
+					font-size: 2em;
+				}
+				time {
+					letter-spacing: 2px;
+					font-size: 1em;
+				}
+			}
+			&:hover {
+				
+			}
+		}
+		a.event {
+			
+			.date {
+				
+				.day {
+					
+				}
+				.month {
+					
+				}
+			}
+			.title {
+				h3 {
+					font-weight: 400;
+					margin: 0px;
+					padding: 20px;
+					span {
+						
+					}
+				}
+			}
+			//a.event:Hover
+			&:hover {
+				background: #FFFFFF;
+				text-decoration: none;
+				.date {
+					color: #FFFFFF;
+				}
+				.title {
+					h3 {
+						span {
+							display: inline;
+							&:hover {
+								background: $dgold;
+							}
+						}
+					}	
+				}
+			}
+			
+		}
+	}
+
+
+	#subscribe {
+		.mailchimp {
+			text-align: center;
+			form {
+				width: 300px;
+				margin: 0px auto;
+				#mc-email {
+					width: 300px;
+					&:hover {
+						
+					}
+				}
+				#mc-send {
+					&:hover {
+						
 					}
 				}
 			}
@@ -413,6 +697,25 @@ section.contact {
 				padding: 5px;
 				margin: 10px auto;
 				background: #FFF;
+			}
+		}
+	}
+
+	header.blog {
+	.blogbar {
+		.search-field {
+			width: 300px;
+		}
+		.search-submit {
+		
+		}
+	}
+	}
+
+	section.events {
+		.event-wrapper {
+			.type-tribe_events {
+				margin: 10px 0px;
 			}
 		}
 	}

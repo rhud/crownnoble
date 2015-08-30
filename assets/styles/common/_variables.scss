@@ -12,8 +12,15 @@ $gold15:				lighten($gold, 15%);
 
 $brand-primary:         $gold;
 $text-color:			#222;
+$input-color-placeholder:	rgba(0,0,0,0.5);
 
-$gold75:				rgba(198, 156, 109, .75);
+@mixin goldtrans($opacity) {
+	background-color: rgba(198,156,109,$opacity);
+}
+
+@mixin whitetrans($opacity) {
+	background-color: rgba(255,255,255,$opacity);
+}
 
 // Crown Noble Override Variables:
 

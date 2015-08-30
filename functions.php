@@ -31,11 +31,19 @@ unset($file, $filepath);
 
 add_theme_support( 'post-thumbnails' ); 
 add_image_size( 'blog-img', 525, 300, true );
+add_image_size( 'blog-square', 150, 150, true );
 
 add_filter( 'image_size_names_choose', 'hh_custom_sizes' );
 
 function hh_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'blog-img' => __( 'Blog Image' )
+        'blog-img' => __( 'Blog Image' ),
+        'blog-square' => __( 'Blog Square' )
     ) );
 }
+
+function new_excerpt_more($more) {
+       global $post;
+    return '... <span class="readmore"><a href="'. get_permalink($post->ID) . '">Continue Reading &raquo;</a></span>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

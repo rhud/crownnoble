@@ -87,6 +87,53 @@ nav.pure-drawer {
 					background: #111;
 					color: $gold;
 				}
+				&:focus {
+					background: none !important;
+					color: $gold;
+				}
+
+			}
+			&.open {
+				a:focus {
+					background: none;
+					color: $gold;
+				}
+			}
+			ul.sub-menu {
+				margin-top: 0px;
+				overflow: hidden;
+				position: relative;
+				display: block;
+				li {
+					margin: 0px;
+					display: block;
+					position: relative;
+					float: left;
+					width: 220px;
+					padding-left: 20px;
+					a {
+						color: $gold;
+						display: block;
+						margin: 0px !important;
+						padding: 10px !important;
+						position: relative;
+						border: none;
+						&:hover {
+							color: $dgold;
+							background: black;
+						}
+					}
+					&::before {
+						width: 1px;
+						height: 20px;
+						background: $gold;
+						display: block;
+						content: "";
+						float: left;
+						margin-top: 10px;
+						margin-right: 10px;
+					}
+				}
 			}
 		}
 	}
@@ -150,10 +197,44 @@ nav.pure-drawer {
 						border-bottom: 2px solid $gold;
 					}
 				}
+				ul.sub-menu {
+					background: rgba(255,255,255,0.95);
+					width: auto;
+					display: none;
+					position: absolute;
+					top: 20px;
+					margin-top: 20px;
+					border-radius: 0px 0px 4px 4px;
+					border: 1px solid $gold30;
+					border-top: none;
+					border-bottom: 3px solid $gold;
+					overflow: none;
+					box-shadow: 0px 3px 3px rgba(0,0,0,0.15);
+					li {
+						float: left;
+						padding: 0px;
+						&::before {
+							display: none;
+						}
+						a {
+							&:hover {
+								background: $gold30;
+							}
+						}
+					}
+				}
 			}
 			li, li:last-child {
 				float: left;
 				border: none;
+			}
+			li:hover {
+				a {
+					border-bottom: 2px solid $gold;
+				}
+				ul.sub-menu {
+					display: block;
+				}
 			}
 		}
 		&.top {

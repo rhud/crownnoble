@@ -1,0 +1,77 @@
+aside {
+	margin-top: 10px;
+	section {
+		margin: 5px 0px;
+		padding: 0px 20px 10px;
+		&.widget_search {
+			background: none;
+			margin: 0px 0px 0px;
+			padding: 0px;
+		}
+		h3 {
+			margin: 0px -20px 10px;
+			padding: 5px 10px;
+			border-bottom: 1px solid $gold;
+			font-size: 1.2em;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		ul {
+			padding: 0px;
+			list-style: none;
+			li {
+				padding: 0px 0px 0px 10px;
+				margin: 0px 0px 10px 0px;
+				border-left: 1px solid #CCC;
+				a {
+					display: block;
+					color: #999;
+					&:hover {
+						color: $gold;
+					}
+				}
+			}
+		}
+	}
+}
+
+.search-field {
+	@include whitetrans(0.75);
+	border: none;
+	color: black;
+	padding: 10px;
+	height: auto;
+	width: 100% ;
+	&:hover {
+		background: white;
+	}
+}
+.input-group-btn {
+	width: 1% !important;
+	.search-submit {
+		background: rgba(0,0,0,0.75);
+		color: white;
+		border: none;
+		padding: 10px;
+		height: auto;
+		&:hover {
+			background: black;
+		}
+	}
+}
+
+ol.vcalendar {
+	padding: 0px;
+	.tribe-events-list-widget-events {
+		margin-bottom: 10px;
+		padding: 0px 0px 0px 10px;
+		border-left: 1px solid #CCC;
+		h4.entry-title {
+			font-size: 1.2em;
+			margin: 0px;
+		}
+		div.duration {
+			font-weight: 300;
+		}
+	}
+}

@@ -18,17 +18,29 @@
     // All pages
     'common': {
       init: function() {
+        var $msg = $('#hero-msg .msg'), l = $msg.length, i = 0;   
+
         var $s = 0;
+
+        winResize($s);
+
+        $(".package-nav").localScroll();
+        
         if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) || $(window).width() > 768){
+          
           $("#hero").addClass("desktop");
+          
           $s = skrollr.init({
-            smoothScrolling: !1,
-            smoothScrollingDuration: 400
+            smoothScrolling: 1,
+            smoothScrollingDuration: 800
           });
+
           new WOW().init({
             //offset: 500
           });
+          
           $s.refresh("#hero-wrapper");
+          
           winResize($s);
         }
 
@@ -43,17 +55,12 @@
         function winResize(s) {
           windowHeight = $(window).height();
           $(".full-height").height(windowHeight);
-          s.refresh("#hero-wrapper");
+          if (s != 0) {
+            s.refresh("#hero-wrapper");
+          }
         }
         
-        $(".package-nav").localScroll({
-          
-        });
         
-        
-        var $msg = $('#hero-msg .msg'), l = $msg.length, i = 0;   
-        
-        winResize($s);
         
         $(window).resize(function() {
           winResize($s);

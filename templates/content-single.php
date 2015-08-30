@@ -1,15 +1,19 @@
+<div class="entry-wrapper">
+  <div class="full-entry">
+
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
-    <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
-    </header>
+  <div class="entry-image">
+        <? the_post_thumbnail('blog-img'); ?>
+      </div>
     <div class="entry-content">
+      <header>
+        <h1 class="entry-title"><?php the_title(); ?></h1>
+        <?php get_template_part('templates/entry-meta'); ?>
+      </header>
       <?php the_content(); ?>
     </div>
-    <footer>
-      <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
-    </footer>
-    <?php comments_template('/templates/comments.php'); ?>
-  </article>
+    <?php // comments_template('/templates/comments.php'); ?>
+  
 <?php endwhile; ?>
+</div>
+</div>
